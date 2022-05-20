@@ -23,7 +23,7 @@ type ArtifactManifest struct {
 	MediaType string `json:"mediaType"`
 
 	// Blobs is a collection of blobs referenced by this manifest.
-	Blobs []v1.Descriptor `json:"blobs"`
+	Blobs []v1.Descriptor `json:"blobs,omitempty"`
 
 	// Refers is an optional link to any existing manifest within the repository.
 	Refers v1.Descriptor `json:"refers,omitempty"`
