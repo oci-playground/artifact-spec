@@ -16,7 +16,7 @@ package v1
 
 import v1 "github.com/opencontainers/image-spec/specs-go/v1"
 
-// Artifact describes an artifact manifest.
+// ArtifactManifest describes an artifact manifest.
 // This structure provides `application/vnd.oci.artifact.manifest.v1+json` mediatype when marshalled to JSON.
 type ArtifactManifest struct {
 	// MediaType is the media type of the object this schema refers to.
@@ -26,7 +26,7 @@ type ArtifactManifest struct {
 	Blobs []v1.Descriptor `json:"blobs,omitempty"`
 
 	// Refers is an optional link to any existing manifest within the repository.
-	Refers v1.Descriptor `json:"refers,omitempty"`
+	Refers *v1.Descriptor `json:"refers,omitempty"`
 
 	// Annotations contains arbitrary metadata for the artifact manifest.
 	Annotations map[string]string `json:"annotations,omitempty"`
