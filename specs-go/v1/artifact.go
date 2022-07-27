@@ -22,6 +22,9 @@ type ArtifactManifest struct {
 	// MediaType is the media type of the object this schema refers to.
 	MediaType string `json:"mediaType"`
 
+	// ArtifactType is the media type of the artifact this schema refers to.
+	ArtifactType string `json:"artifactType"`
+
 	// Blobs is a collection of blobs referenced by this manifest.
 	Blobs []v1.Descriptor `json:"blobs,omitempty"`
 
